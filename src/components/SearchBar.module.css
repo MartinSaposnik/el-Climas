@@ -1,0 +1,31 @@
+.searchBar{
+    width: fit-content;
+    height: 2rem;
+    display: flex;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    padding: 0.25rem;
+}
+
+.input{
+    width: calc(25vw - 1.25rem - 5rem);
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 1px 1rem;
+}
+
+.input::placeholder{
+    color: white;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.submit{
+    border-radius: 9999px;
+    border: solid 1px var(--border-color);
+    color: white;
+    background-color: #ffffff00;
+}

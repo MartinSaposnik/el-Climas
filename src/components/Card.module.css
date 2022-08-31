@@ -1,0 +1,77 @@
+.card{
+    position: relative;
+
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+
+    width: fit-content; /*se adapta al contenido*/
+    padding: 0.25rem;
+    display: flex;
+    flex-direction: column;
+
+    backdrop-filter: blur(8px); /*efecto de vidrio*/
+    background-color: #00000040;/*opacidad*/
+}
+
+.cardBtn{
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+
+    box-sizing: border-box;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    border: 1px solid transparent;
+    border-radius: 9999px; /*forma un circulo*/
+    color: white;
+    background-color: var(--btn-bkg-danger);
+
+    cursor: pointer;
+
+    transition: background-color 300ms;
+}
+
+.cardBtn:hover{
+    background-color: var(--btn-bkg-danger-hover);
+}
+
+.card > section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.name{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.mainCard{
+    border-color:transparent ;
+}
+
+.mainCard .cardBtn{
+    display: none;
+}
+
+.mainCard .name{
+    font-size: 3rem;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+}
+
+.mainCard > section{
+    align-items: flex-start;
+}
+
+.mainCard > section > .temp{
+    color: white;
+    padding-top: 1rem;
+}
+
+.mainCard > section > img {
+    width: 150px;
+    height: 150px;
+}
