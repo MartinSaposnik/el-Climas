@@ -27,7 +27,7 @@ function WeatherApp(){
 
             setTimeout(()=>{
                 setWeather(json);
-            },2000);
+            },1000);
             
         }catch(error){}
     }
