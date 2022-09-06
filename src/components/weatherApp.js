@@ -1,4 +1,4 @@
-import {useState} from "react"
+import { useState } from "react"
 import WeatherForm from "./weatherForm"
 
 export default function WeatherApp(){
@@ -9,6 +9,8 @@ export default function WeatherApp(){
         try{
             const request = await fetch(`${process.env.REACT_APP_URL}&key=${process.env.REACT_APP_KEY}&Q=${city}`);
             const json = await request.json();
+            setWeather(json);
+            console.log(json);
         }catch(error){
 
         }
@@ -21,6 +23,6 @@ export default function WeatherApp(){
 
     return <div>
         <WeatherForm onchangeCity={handleChangeCity}/>
-        <div>Info</div>
+        <div>{weather?.current.temp_c}</div>
     </div>
 }
