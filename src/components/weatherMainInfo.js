@@ -1,9 +1,12 @@
 import styles from './weatherMainInfo.module.css';
 
 export default function WeatherMainInfo({ weather }) {
+
+    const nameCity = weather?.location.name;
+
     return (
     <div className={styles.mainInfo}>
-        <div className={styles.city}>{weather?.location.name}</div>
+        <div className={styles.city}>{nameCity}</div>
         <div className={styles.country}>{weather?.location.country}</div>
         <div className={styles.row}>
             <div>
